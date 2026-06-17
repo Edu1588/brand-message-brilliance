@@ -122,6 +122,7 @@ function Index() {
           <nav className="hidden gap-8 font-mono-tag md:flex">
             <a href="#servicos" className="hover:text-signal">Serviços</a>
             <a href="#processo" className="hover:text-signal">Processo</a>
+            <a href="#portfolio" className="hover:text-signal">Portfólio</a>
             <a href="#custos" className="hover:text-signal">Custos</a>
             <a href="#contato" className="hover:text-signal">Contato</a>
           </nav>
