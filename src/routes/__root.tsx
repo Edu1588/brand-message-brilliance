@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MERIDIAN/STUDIO — Engenharia digital de alta performance" },
+      { title: "ESCOM/STUDIO — Engenharia digital de alta performance" },
       { name: "description", content: "Estúdio brutalista de design, automação e engenharia de conversão. Ecossistemas digitais blindados, sem retalhos de SaaS." },
-      { property: "og:title", content: "MERIDIAN/STUDIO" },
+      { property: "og:title", content: "ESCOM/STUDIO" },
       { property: "og:description", content: "Engenharia de conversão e design brutalista premium." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

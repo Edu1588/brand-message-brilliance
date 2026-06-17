@@ -41,7 +41,7 @@
   --paper: oklch(0.985 0.002 90);
   --ink: oklch(0.13 0 0);
   --rule: oklch(0.13 0 0 / 12%);
-  --signal: oklch(0.72 0.19 55);
+  --signal: #02c5ba;
 
   --background: var(--paper);
   --foreground: var(--ink);
