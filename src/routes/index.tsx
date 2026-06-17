@@ -28,6 +28,57 @@ const METRICS = [
   { v: "100/100", k: "Lighthouse score", d: "Performance, SEO e acessibilidade no topo absoluto." },
 ];
 
+const PORTFOLIO = [
+  {
+    n: "case_01",
+    client: "Halden Capital",
+    sector: "Fintech / Investimentos",
+    title: "Plataforma proprietária de gestão patrimonial",
+    desc: "Sistema blindado substituindo 6 SaaS distintos. Dashboard ao vivo, CRM nativo e automação de relatórios fiscais.",
+    metrics: [
+      { v: "+312%", k: "Conversão MQL→SQL" },
+      { v: "−R$ 18k/mês", k: "Custo de stack" },
+    ],
+    tag: "PRODUTO DIGITAL",
+  },
+  {
+    n: "case_02",
+    client: "Nordform Studio",
+    sector: "Arquitetura de interiores",
+    title: "Identidade e e-commerce de mobiliário autoral",
+    desc: "Branding, fotografia direcionada e loja integrada a ERP. Checkout otimizado para ticket médio acima de R$ 12k.",
+    metrics: [
+      { v: "+R$ 2.4M", k: "GMV em 6 meses" },
+      { v: "100/100", k: "Lighthouse" },
+    ],
+    tag: "E-COMMERCE",
+  },
+  {
+    n: "case_03",
+    client: "Vertex Legal",
+    sector: "Advocacia tributária",
+    title: "Portal de cliente e automação de intake",
+    desc: "Onboarding digital com assinatura eletrônica, KYC automatizado e área logada para acompanhamento processual.",
+    metrics: [
+      { v: "−72%", k: "Tempo de intake" },
+      { v: "0", k: "Retrabalho manual" },
+    ],
+    tag: "SISTEMAS WEB",
+  },
+  {
+    n: "case_04",
+    client: "Atlas Performance",
+    sector: "Marketing de performance",
+    title: "Landing pages brutalistas em escala",
+    desc: "Engine de 40+ landing pages para tráfego pago. Carregamento sub-segundo, A/B nativo e webhook direto para CRM.",
+    metrics: [
+      { v: "+240%", k: "ROAS médio" },
+      { v: "0.4s", k: "LCP" },
+    ],
+    tag: "LANDING PAGES",
+  },
+];
+
 const FAQ = [
   { q: "Quanto tempo leva um projeto?", a: "Entre 4 e 8 semanas, dependendo da complexidade da infraestrutura e dos fluxos de automação." },
   { q: "Vocês oferecem manutenção?", a: "Sim. Planos de acompanhamento contínuo com suporte técnico ativo, garantindo sistema atualizado e otimizado." },
@@ -71,6 +122,7 @@ function Index() {
           <nav className="hidden gap-8 font-mono-tag md:flex">
             <a href="#servicos" className="hover:text-signal">Serviços</a>
             <a href="#processo" className="hover:text-signal">Processo</a>
+            <a href="#portfolio" className="hover:text-signal">Portfólio</a>
             <a href="#custos" className="hover:text-signal">Custos</a>
             <a href="#contato" className="hover:text-signal">Contato</a>
           </nav>
@@ -238,6 +290,72 @@ function Index() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.d}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="border-b border-ink">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-32">
+          <div className="mb-16 grid gap-8 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <div className="font-mono-tag text-muted-foreground">{">_ /06 PORTFÓLIO"}</div>
+              <h2 className="display-mega mt-4 text-5xl md:text-7xl">Operações<br /><span className="italic font-light">em campo.</span></h2>
+            </div>
+            <p className="text-lg leading-relaxed md:col-span-6 md:col-start-7 md:text-xl">
+              Quatro recortes de projetos onde substituímos pilhas de SaaS, retalhos de agências e gargalos operacionais por sistemas únicos, blindados e mensuráveis.
+            </p>
+          </div>
+
+          <div className="grid border-t border-ink md:grid-cols-2">
+            {PORTFOLIO.map((c, i) => (
+              <article
+                key={c.n}
+                className={`group relative border-b border-ink p-8 transition hover:bg-ink hover:text-paper md:p-12 ${i % 2 === 0 ? "md:border-r" : ""}`}
+              >
+                <div className="mb-8 flex items-baseline justify-between font-mono-tag">
+                  <span>/{c.n}</span>
+                  <span className="text-muted-foreground group-hover:text-signal">{c.tag}</span>
+                </div>
+
+                <div className="mb-8 aspect-[16/10] w-full border border-ink bg-paper transition group-hover:border-paper">
+                  <div className="grid h-full grid-cols-6 grid-rows-4">
+                    {Array.from({ length: 24 }).map((_, k) => (
+                      <div
+                        key={k}
+                        className={`border-r border-b border-ink/10 group-hover:border-paper/10 ${
+                          [3, 8, 14, 17, 22].includes(k) ? "bg-signal" : ""
+                        } ${[5, 11, 19].includes(k) ? "bg-ink group-hover:bg-paper" : ""}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="font-mono-tag text-muted-foreground group-hover:text-paper/60">
+                  {c.client} — {c.sector}
+                </div>
+                <h3 className="display-mega mt-3 text-3xl leading-tight md:text-4xl">{c.title}</h3>
+                <p className="mt-4 max-w-lg text-base leading-relaxed">{c.desc}</p>
+
+                <div className="mt-8 grid grid-cols-2 gap-px bg-ink/20 group-hover:bg-paper/20">
+                  {c.metrics.map((m) => (
+                    <div key={m.k} className="bg-background p-4 group-hover:bg-ink">
+                      <div className="display-mega text-2xl md:text-3xl">{m.v}</div>
+                      <div className="mt-1 font-mono-tag text-xs text-muted-foreground group-hover:text-paper/60">{m.k}</div>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-ink pt-8">
+            <p className="font-mono-tag text-muted-foreground">
+              {">_ 24 PROJETOS ATIVOS / 8 SETORES / 4 PAÍSES"}
+            </p>
+            <a href="#contato" className="border border-ink px-6 py-3 font-mono-tag transition hover:bg-ink hover:text-paper">
+              Solicitar dossiê completo →
+            </a>
           </div>
         </div>
       </section>
