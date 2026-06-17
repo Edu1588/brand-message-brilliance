@@ -67,7 +67,7 @@ function Index() {
       {/* NAV */}
       <header className="sticky top-0 z-50 border-b border-ink bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
-          <a href="#" className="font-mono-tag font-medium">MERIDIAN/STUDIO</a>
+          <a href="#" className="font-mono-tag font-medium">ESCOM/STUDIO</a>
           <nav className="hidden gap-8 font-mono-tag md:flex">
             <a href="#servicos" className="hover:text-signal">Serviços</a>
             <a href="#processo" className="hover:text-signal">Processo</a>
@@ -181,7 +181,7 @@ function Index() {
               </div>
             </div>
             <div className="bg-signal p-10 text-ink md:p-14">
-              <div className="font-mono-tag">MODELO MERIDIAN</div>
+              <div className="font-mono-tag">MODELO ESCOM</div>
               <h3 className="display-mega mt-4 text-3xl md:text-4xl">Um único sistema<br />blindado.</h3>
               <ul className="mt-8 space-y-2 font-mono-tag">
                 <li>+ CRM integrado nativamente</li>
@@ -308,7 +308,7 @@ function Index() {
       <footer className="bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10">
           <div className="mb-12 flex flex-wrap gap-x-10 gap-y-3">
-            <span className="font-mono-tag">MERIDIAN/STUDIO</span>
+            <span className="font-mono-tag">ESCOM/STUDIO</span>
             <Clock city="São Paulo" tz="America/Sao_Paulo" />
             <Clock city="Tokyo" tz="Asia/Tokyo" />
             <Clock city="London" tz="Europe/London" />
@@ -346,7 +346,7 @@ function Index() {
             </div>
           </div>
           <div className="mt-16 flex flex-wrap items-end justify-between gap-6 border-t border-paper/20 pt-8 font-mono-tag text-paper/60">
-            <div>© 2026 MERIDIAN/STUDIO — Todos os direitos reservados.</div>
+            <div>© 2026 ESCOM/STUDIO — Todos os direitos reservados.</div>
             <div>São Paulo — Brasil</div>
           </div>
         </div>
