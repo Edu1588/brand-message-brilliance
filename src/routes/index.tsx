@@ -28,6 +28,57 @@ const METRICS = [
   { v: "100/100", k: "Lighthouse score", d: "Performance, SEO e acessibilidade no topo absoluto." },
 ];
 
+const PORTFOLIO = [
+  {
+    n: "case_01",
+    client: "Halden Capital",
+    sector: "Fintech / Investimentos",
+    title: "Plataforma proprietária de gestão patrimonial",
+    desc: "Sistema blindado substituindo 6 SaaS distintos. Dashboard ao vivo, CRM nativo e automação de relatórios fiscais.",
+    metrics: [
+      { v: "+312%", k: "Conversão MQL→SQL" },
+      { v: "−R$ 18k/mês", k: "Custo de stack" },
+    ],
+    tag: "PRODUTO DIGITAL",
+  },
+  {
+    n: "case_02",
+    client: "Nordform Studio",
+    sector: "Arquitetura de interiores",
+    title: "Identidade e e-commerce de mobiliário autoral",
+    desc: "Branding, fotografia direcionada e loja integrada a ERP. Checkout otimizado para ticket médio acima de R$ 12k.",
+    metrics: [
+      { v: "+R$ 2.4M", k: "GMV em 6 meses" },
+      { v: "100/100", k: "Lighthouse" },
+    ],
+    tag: "E-COMMERCE",
+  },
+  {
+    n: "case_03",
+    client: "Vertex Legal",
+    sector: "Advocacia tributária",
+    title: "Portal de cliente e automação de intake",
+    desc: "Onboarding digital com assinatura eletrônica, KYC automatizado e área logada para acompanhamento processual.",
+    metrics: [
+      { v: "−72%", k: "Tempo de intake" },
+      { v: "0", k: "Retrabalho manual" },
+    ],
+    tag: "SISTEMAS WEB",
+  },
+  {
+    n: "case_04",
+    client: "Atlas Performance",
+    sector: "Marketing de performance",
+    title: "Landing pages brutalistas em escala",
+    desc: "Engine de 40+ landing pages para tráfego pago. Carregamento sub-segundo, A/B nativo e webhook direto para CRM.",
+    metrics: [
+      { v: "+240%", k: "ROAS médio" },
+      { v: "0.4s", k: "LCP" },
+    ],
+    tag: "LANDING PAGES",
+  },
+];
+
 const FAQ = [
   { q: "Quanto tempo leva um projeto?", a: "Entre 4 e 8 semanas, dependendo da complexidade da infraestrutura e dos fluxos de automação." },
   { q: "Vocês oferecem manutenção?", a: "Sim. Planos de acompanhamento contínuo com suporte técnico ativo, garantindo sistema atualizado e otimizado." },
